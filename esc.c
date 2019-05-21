@@ -23,7 +23,7 @@ int main(void)
     SET_BIT(DDRB, 4);
     SET_BIT(DDRB, 3);
 
-    int16_t Speed=0, Yaw_rate=0, Steer_angle=0, diff;
+    int16_t Speed=0, Yaw_rate=0, Steer_angle=0, diff=0;
 
     while(1)
     {
