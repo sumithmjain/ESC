@@ -27,13 +27,14 @@ int main(void)
 
     while(1)
     {
+        int16_t Speed=0, Yaw_rate=0, Steer_angle=0,diff=0;
         Speed = readADC(0);
         _delay_ms(200);
         Yaw_rate = readADC(1);
         _delay_ms(200);
         Steer_angle = readADC(2);
         _delay_ms(200);
-       int16_t Speed=0, Yaw_rate=0, Steer_angle=0,diff=0;
+       
        Yaw_rate = Yaw_rate * 0.351625;
        Steer_angle = Steer_angle * 0.351625;
        diff = Steer_angle - Yaw_rate;
