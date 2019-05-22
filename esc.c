@@ -23,7 +23,7 @@ int main(void)
     SET_BIT(DDRB, 4);
     SET_BIT(DDRB, 3);
 
-    int16_t Speed=0, Yaw_rate=0, Steer_angle=0, diff=0;
+    int16_t Speed=0, Yaw_rate=0, Steer_angle=0;
 
     while(1)
     {
@@ -33,7 +33,7 @@ int main(void)
         _delay_ms(200);
         Steer_angle = readADC(2);
         _delay_ms(200);
-
+        int16_t diff=0;
        Yaw_rate = Yaw_rate * 0.351625;
        Steer_angle = Steer_angle * 0.351625;
        diff = Steer_angle - Yaw_rate;
